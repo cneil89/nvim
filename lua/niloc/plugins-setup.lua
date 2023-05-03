@@ -33,7 +33,13 @@ return packer.startup(function(use)
 
     use { "nvim-lua/plenary.nvim" } 
     
-    use { "bluz71/vim-nightfly-colors", as = "nightfly" }
+    use({
+        'rose-pine/neovim',
+        as = 'rose-pine',
+        config = function()
+            vim.cmd('colorscheme rose-pine')
+        end
+    })
 
     use { "theprimeagen/harpoon" }
 
