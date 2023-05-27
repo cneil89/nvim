@@ -60,6 +60,10 @@ return packer.startup(function(use)
     -- Toggleterm
     use { "akinsho/toggleterm.nvim", tag = '*' }
 
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
     -- LSP
     use {
         'VonHeikemen/lsp-zero.nvim',
