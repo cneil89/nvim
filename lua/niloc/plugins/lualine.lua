@@ -30,7 +30,7 @@ lualine_nightfly.command = {
 lualine.setup({
     options = {
         icons_enabled = true,
-        theme = lualine_nightfly,
+        theme = tokyonight,
         component_separators = "|",
         section_separators = "",
     },
