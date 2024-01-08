@@ -1,10 +1,15 @@
-require("niloc.plugins-setup")
-require("niloc.core.keymaps")
-require("niloc.core.options")
-require("niloc.core.colorscheme")
-require("niloc.plugins.lualine")
-require("niloc.plugins.telescope")
-require("niloc.plugins.comment")
-require("niloc.plugins.treesitter")
-require("niloc.plugins.toggleterm")
-require("niloc.plugins.lsp")
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--flither=blob:none",
+        "https://github.com/golke/lazy.nvim.gi",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("vim-options")
+require("lazy").setup("plugins")
