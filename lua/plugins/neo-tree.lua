@@ -11,6 +11,7 @@ return {
         -- vim.keymap.set('n', '<leader>b', ':Neotree filesystem reveal left<CR>', {})
         vim.keymap.set('n', '<leader>B', ':Neotree buffers reveal float<CR>', {})
         require("neo-tree").setup({
+            close_if_last_window = true,
             window = {
                 width = 30
             }
