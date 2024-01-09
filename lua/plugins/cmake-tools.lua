@@ -50,6 +50,6 @@ return {
                 focus_on_launch_terminal = false, -- Focus on cmake launch terminal when executable target in launched.
             }
         })
-        vim.keymap.set("n", "<C-b>", "<CMD>CMakeBuild<CR>", {})
+        vim.keymap.set("n", "<F7>", "<CMD>CMakeBuild<CR>", {})
     end,
 }
