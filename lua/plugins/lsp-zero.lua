@@ -43,6 +43,7 @@ return {
                     ["<C-b>"] = cmp_action.luasnip_jump_backward(),
                     ["<C-k>"] = cmp.mapping.select_prev_item(cmp_select),
                     ["<C-j>"] = cmp.mapping.select_next_item(cmp_select),
+                    ["<CR>"] = cmp.mapping.confirm({ selected = true }),
                 }),
             })
         end,
@@ -82,7 +83,7 @@ return {
 
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-            vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
+            vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
             vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
         end,
     },
