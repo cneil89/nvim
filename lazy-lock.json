@@ -1,6 +1,7 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "0236521ea582747b58869cb72f70ccfa967d2e89" },
   "LuaSnip": { "branch": "master", "commit": "2f0db89fcb22d27b908b3609d2441c02798106ab" },
+  "adwaita.nvim": { "branch": "main", "commit": "981bce791959d79cd1316e59e23906e3c05efb44" },
   "cmake-tools.nvim": { "branch": "master", "commit": "5c39242383f5db39b04248bb5c65e0b72f984b22" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "5af77f54de1b16c34b23cba810150689a3a90312" },
   "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
