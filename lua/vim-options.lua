@@ -20,10 +20,10 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- split screen and navigation
 keymap.set("n", "<leader>v", ":vsplit<CR><C-w>l", { noremap = true })
-keymap.set("n", "<leader>h", ":wincmd h<CR>", { noremap = true })
-keymap.set("n", "<leader>l", ":wincmd l<CR>", { noremap = true })
-keymap.set("n", "<leader>j", ":wincmd j<CR>", { noremap = true })
-keymap.set("n", "<leader>k", ":wincmd k<CR>", { noremap = true })
+keymap.set("n", "<c-h>", ":wincmd h<CR>", { noremap = true })
+keymap.set("n", "<c-l>", ":wincmd l<CR>", { noremap = true })
+keymap.set("n", "<c-j>", ":wincmd j<CR>", { noremap = true })
+keymap.set("n", "<c-k>", ":wincmd k<CR>", { noremap = true })
 
 -- appearance
 opt.relativenumber = true
@@ -31,6 +31,7 @@ opt.number = true
 opt.signcolumn = "yes"
 opt.cursorline = true
 opt.scrolloff = 8
+opt.colorcolumn = "80"
 
 -- tabs
 opt.tabstop = 4
@@ -40,11 +41,12 @@ opt.expandtab = true
 
 opt.iskeyword:append("-") -- consider string-string as whole word
 
+local icons = require("config.icons")
 vim.fn.sign_define("DiagnosticSignError",
-    {text = " ", texthl = "DiagnosticSignError"})
+    {text = icons.diagnostics.Error, texthl = "DiagnosticSignError"})
 vim.fn.sign_define("DiagnosticSignWarn",
-    {text = " ", texthl = "DiagnosticSignWarn"})
+    {text = icons.diagnostics.Warning, texthl = "DiagnosticSignWarn"})
 vim.fn.sign_define("DiagnosticSignInfo",
-    {text = " ", texthl = "DiagnosticSignInfo"})
+    {text = icons.diagnostics.Info, texthl = "DiagnosticSignInfo"})
 vim.fn.sign_define("DiagnosticSignHint",
-    {text = "󰌵", texthl = "DiagnosticSignHint"})
+    {text = icons.diagnostics.Hint, texthl = "DiagnosticSignHint"})
