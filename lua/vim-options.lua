@@ -20,10 +20,10 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- split screen and navigation
 keymap.set("n", "<leader>v", ":vsplit<CR><C-w>l", { noremap = true })
-keymap.set("n", "<c-h>", ":wincmd h<CR>", { noremap = true })
-keymap.set("n", "<c-l>", ":wincmd l<CR>", { noremap = true })
-keymap.set("n", "<c-j>", ":wincmd j<CR>", { noremap = true })
-keymap.set("n", "<c-k>", ":wincmd k<CR>", { noremap = true })
+keymap.set("n", "<leader>h", ":wincmd h<CR>", { noremap = true })
+keymap.set("n", "<leader>l", ":wincmd l<CR>", { noremap = true })
+keymap.set("n", "<leader>j", ":wincmd j<CR>", { noremap = true })
+keymap.set("n", "<leader>k", ":wincmd k<CR>", { noremap = true })
 
 -- appearance
 opt.relativenumber = true
