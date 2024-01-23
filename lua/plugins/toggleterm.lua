@@ -8,7 +8,6 @@ return {
         })
         vim.keymap.set("n", "<C-t>", ":ToggleTerm<CR>", {})
         vim.keymap.set("t", "<C-t>", [[<C-\><C-n>:ToggleTerm<CR>]], {})
-        vim.keymap.set("t", "jj", [[<C-\><C-n>]], {})
         vim.keymap.set("t", "<ESC>", [[<C-\><C-n>]], {})
         vim.keymap.set("t", "<C-h>", [[<Cmd>wincmd h<CR>]], {})
         vim.keymap.set("t", "<C-j>", [[<Cmd>wincmd j<CR>]], {})
