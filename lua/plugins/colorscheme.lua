@@ -1,8 +1,9 @@
 return {
-	"Mofiqul/dracula.nvim",
+	"NLKNguyen/papercolor-theme",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		vim.cmd.colorscheme("dracula")
+		vim.o.background = "dark"
+		vim.cmd.colorscheme("PaperColor")
 	end,
 }
