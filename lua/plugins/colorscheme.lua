@@ -1,20 +1,16 @@
 return {
-    "NLKNguyen/papercolor-theme",
+    "rebelot/kanagawa.nvim",
     lazy = false,
     priority = 1000,
-    init = function()
-        vim.g.PaperColor_Theme_Options = {
-            theme = {
-                ["default.dark"] = {
-                    override = {
-                        error_bg = { "#1c1c1c", "234" },
-                    },
-                },
-            },
-        }
-    end,
     config = function()
-        vim.o.background = "dark"
-        vim.cmd.colorscheme("PaperColor")
+        require("kanagawa").setup({
+            commentStyle = { italic = false },
+            keywordStyle = { italic = false },
+            background = {
+                dark = "dragon",
+                light = "lotus",
+            },
+        })
+        vim.cmd.colorscheme("kanagawa")
     end,
 }
