@@ -31,7 +31,7 @@ opt.number = true
 opt.signcolumn = "yes"
 opt.cursorline = true
 opt.scrolloff = 8
-opt.colorcolumn = "80"
+opt.colorcolumn = "100"
 
 -- tabs
 opt.tabstop = 4
@@ -42,11 +42,7 @@ opt.expandtab = true
 opt.iskeyword:append("-") -- consider string-string as whole word
 
 local icons = require("config.icons")
-vim.fn.sign_define("DiagnosticSignError",
-    {text = icons.diagnostics.Error, texthl = "DiagnosticSignError"})
-vim.fn.sign_define("DiagnosticSignWarn",
-    {text = icons.diagnostics.Warning, texthl = "DiagnosticSignWarn"})
-vim.fn.sign_define("DiagnosticSignInfo",
-    {text = icons.diagnostics.Info, texthl = "DiagnosticSignInfo"})
-vim.fn.sign_define("DiagnosticSignHint",
-    {text = icons.diagnostics.Hint, texthl = "DiagnosticSignHint"})
+vim.fn.sign_define("DiagnosticSignError", { text = icons.diagnostics.Error, texthl = "DiagnosticSignError" })
+vim.fn.sign_define("DiagnosticSignWarn", { text = icons.diagnostics.Warning, texthl = "DiagnosticSignWarn" })
+vim.fn.sign_define("DiagnosticSignInfo", { text = icons.diagnostics.Info, texthl = "DiagnosticSignInfo" })
+vim.fn.sign_define("DiagnosticSignHint", { text = icons.diagnostics.Hint, texthl = "DiagnosticSignHint" })
