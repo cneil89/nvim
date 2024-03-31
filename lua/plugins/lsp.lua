@@ -12,13 +12,25 @@ return {
                 "gopls",
                 "clangd",
                 "cmake",
+                "templ",
             },
             handlers = {
                 function(server_name)
-                    lspconfig[server_name].setup({})
+                    lspconfig[server_name].setup({
+                        on_attach = on_attach,
+                        capabilities = capabilities,
+                    })
                 end,
             },
         })
+
+        -- local servers = { "gopls", "ccls", "cmake", "templ" }
+        -- for _, lsp in ipairs(servers) do
+        --     lspconfig[lsp].setup({
+        --         on_attach = on_attach,
+        --         capabilities = capabilities,
+        --     })
+        -- end
 
         lspconfig.lua_ls.setup({
             settings = {
