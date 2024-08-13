@@ -25,12 +25,17 @@
 -- }
 
 return {
-	"eldritch-theme/eldritch.nvim",
-	lazy = false,
-	priority = 1000,
-	opts = {},
-	config = function()
-		require("eldritch").setup({})
-		vim.cmd.colorscheme("eldritch")
-	end,
+    "eldritch-theme/eldritch.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function()
+        require("eldritch").setup({
+            styles = {
+                comments = { italic = false },
+                keywords = { italic = false },
+            },
+        })
+        vim.cmd.colorscheme("eldritch")
+    end,
 }
